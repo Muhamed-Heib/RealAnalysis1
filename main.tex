@@ -1,0 +1,44 @@
+\documentclass{report}
+
+
+\usepackage{hyperref}
+\usepackage{amsfonts} 
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{amsthm}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+
+
+\title{Real Analysis 1}
+\author{Muhamed Heib}
+\date{August 2024}
+
+% Define the custom command
+\newcommand{\FA}{\forall\hspace{0.3em}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+
+\newtheorem{lemma}{Lemma}
+
+\let\oldlim\lim
+\renewcommand{\lim}{\displaystyle\oldlim}
+
+
+\setstretch{2}
+\vspace{1em}
+
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\include{Introduction}
+\include{Sequences}
+
+\end{document}

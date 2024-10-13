@@ -1,0 +1,305 @@
+\chapter{Introduction}
+\section{Table Of Symbols}
+\begin{longtable}{|p{2cm}|p{3cm}|p{4cm}|p{5cm}|}
+    \hline
+    Symbol & Meaning & When It is used & Example  \\ 
+    \hline
+    \endfirsthead
+
+    \hline
+    Symbol & Meaning & When It is used & Example  \\ 
+    \hline
+    \endhead
+    
+    \hline
+    \endfoot
+
+    \hline
+    \endlastfoot
+
+    $\{\ldots\}$ & Set notation & Used for creating a group & $A = \{a_1,a_2\}$ \\ 
+    \hline
+    $\forall$  & For all & Used for all elements in a group & $\forall$ students in the 11th grade    \\ 
+    \hline
+    $\in$ & Element of & Used to indicate a member is in a set & $\forall$ students $\in$ the 11th grade   \\ 
+    \hline
+    $\backslash$ & Without & Used to exclude an element from a set & Group of students $\backslash$ Romeo  \\ 
+    \hline
+    $\mid$ & Such that & Used when making conditions in a group & $A = \{x \mid x > 10\}$ \\ 
+    \hline
+    $\subset$ & Subset & Indicates that a set is a subset of another & $\N \subset \Z$  \\ 
+    \hline
+    $\rightarrow$ / $\Longrightarrow$ & Implies & Used to show implication or cause & $90\% \text{ on exam} \Longrightarrow A^+$ \\ 
+    \hline
+    $\iff$ & If and only if & Used when we say an argument happens $\iff$ another argument happens & $n \text{ is even } \iff n = 2k$ \\ 
+    \hline
+    $\exists$ & There exists & Used when we say that something exists & $\exists n \in \N$ such that $n^2 > 4$ \\ 
+    \hline
+\end{longtable}
+
+\newpage
+
+\section{Groups}
+\subsection{Definition}
+A group is represented by curly braces, with its elements separated by commas: 
+\[
+A = \{a_1,a_2,a_3,\dots,a_n\}
+\]
+where $A$ is the set name, and each $a_i$ for $1 \leq i \leq n$ is an element of $A$.\\
+Set names are typically capital letters, while elements are lowercase.
+
+\subsection{Examples of Groups}
+\[
+\{3,7\} = \{7,3\} = \{7,7,3\} = \{3,3,7\}
+\]
+In set theory, order and repetition do not matter.\\
+Examples:
+\[
+\N = \{1, 2, 3, 4, \dots\}
+\]
+\[
+\Z = \{0, 1, -1, 2, -2, 3, -3, \dots\}
+\]
+\[
+\Q = \left\{ \frac{a}{b} \mid a \in \Z, b \in \Z \backslash \{0\} \right\}
+\]
+\[
+\R = \left\{ x \mid -\infty < x < \infty \right\}
+\]
+\newpage
+
+\noindent \textbf{Example of Usage:}  
+$\forall x \in A$, $x > 10$.  
+This means that every element in set $A$ (let's name it $x$) is greater than 10.\\
+$\exists\: y\in B \;$ such that $y$ is odd, this means that exists an element in $B$, let's name it $y$, odd.\\
+Whenever you see these symbols written in this order I want you to perceive it like this, because a lot of students when they begin to study \textbf{Infinitesimal Calculus} read symbols without understanding them.
+
+\subsection{Logical Operators and Proofs}
+
+\subsubsection{Question 1}
+\textbf{Given:} $n$ is odd. Prove that $n^2$ is odd.
+
+\begin{proof}
+Every odd number can be expressed as $2k + 1$, where $k \in \N$.\\
+Let $n = 2k + 1$.
+\begin{align*}
+    n^2 &= (2k + 1)^2 \\
+        &= 4k^2 + 4k + 1
+\end{align*}
+This is clearly an even number $+ 1$, hence $n^2$ is odd.
+\end{proof}
+
+
+\subsection{Question 2}
+Given a number $n$, if $n^2$ is even, prove that $n$ is even.
+
+\noindent In the previous question, we proved that if $n$ is odd, $n^2$ is odd.\\
+
+\noindent Important to note: if $a \Longrightarrow b$, then not $b \Longrightarrow$ not $a$ (this is logically equivalent).\\
+\begin{proof}
+$n$ odd $\Longrightarrow$ $n^2$ is odd (Proved above).\\
+This is equivalent to: $n^2$ is even $\Longrightarrow$ $n$ is even.
+\end{proof}
+
+\subsection{Proving $\sqrt{2}$ is Irrational}
+We need to prove that \( \sqrt{2} \notin \Q \).
+
+\begin{proof}
+Assume \( \sqrt{2} = \frac{m}{n} \), where \( m \) and \( n\neq 0 \) are integers, and the fraction $\frac{m}{n}$ is at it's simplest form.\\  
+Squaring both sides:
+\[
+2 = \frac{m^2}{n^2} \implies m^2 = 2n^2
+\]
+Since $m^2$ is even, $m$ must be even. Let $m = 2k$.  
+Substitute into the equation:
+\[
+(2k)^2 = 2n^2 \implies 4k^2 = 2n^2 \implies n^2 = 2k^2
+\]
+Thus, $n^2$ is also even, so $n$ is even.  
+This contradicts our assumption that the fraction $\frac{m}{n}$ is at it's simplest form, so $\sqrt{2} \notin \Q$.
+\end{proof}
+
+
+\section{Density of Rational Numbers}
+$\forall x<y\in \R \; \exists q\in \Q$ such that $x<q<y$\\ 
+
+\begin{proof}
+    \[
+        x<y \Longrightarrow 0 < y-x 
+    \]
+    Then we can get the inverse of $y-x$ which is $\frac{1}{y-x}$\\
+    Based on the \textbf{Axiom Of Archimedes} that states: $\forall r\in \R\: \exists n\in \N$ such that $n>r$\\
+    \[
+        \exists n\in \N\; s.t \quad n>\frac{1}{y-x} \iff ny-nx>1
+    \]
+    The distance between two real numbers is bigger than 1, that means: $\exists \: m\in \N$ such that $nx<m<ny$\\
+    \[
+        nx<m<ny \iff x<\frac{m}{n}<y
+    \]
+\end{proof}
+
+\section{Absolute Value}
+\subsection{Definition}
+\begin{align*}
+    |x| = \left\{
+    \begin{array}{ll}
+    x & \text{if } x \geq 0 \\
+    -x & \text{if } x < 0
+    \end{array}
+    \right.
+\end{align*}
+
+\newpage
+\subsection{Features without Proof}
+\begin{enumerate}
+    \item $|x|\geq 0$
+    \item $|x| \geq x$ , $|x| \geq -x$
+    \item $|x| = |-x|$
+    \item $|x| = 0 \iff x = 0$
+    \item $|xy| = |x|\:|y|$
+    \item $|x+y|\leq |x|+|y|$ \textbf{Traingle Inequality 1(*)}
+    \item $\Big| |x| - |y| \Big| \leq \Big| x - y \Big|$ \textbf{Traingle Inequality 2}
+    \item \label{abs:open-abs}$|x| < M \iff -M\: <x<\: M$ \textbf{(*)}
+\end{enumerate}
+
+\section{Intervals}
+\[
+(a,b) = \{x \mid a < x < b\}
+\]
+All numbers between $a$ and $b$. Similarly:
+\[
+[a,b] = \{x \mid a \leq x \leq b\}, \quad [a,b) = \{x \mid a \leq x < b\}, \quad (a,b] = \{x \mid a < x \leq b\}
+\]
+\[
+(a, \infty) = \{x \mid a < x\}, \quad (-\infty, a) = \{x \mid x < a\}
+\]
+
+\subsection{Neighborhood of a Point}
+Given a point $x_0 \in \R$ and a number $\varepsilon > 0$, the interval $(x_0 - \varepsilon, x_0 + \varepsilon)$ is called the $\varepsilon$-neighborhood of $x_0$.  
+\textbf{Example:}  
+The interval $(3.5, 4.5)$ is the $0.5$-neighborhood of $4$.
+
+
+\subsection{More Features of Absolute Value}
+\textbf{Claim}: $|x-x_0|<\varepsilon \iff x\in (x_0-\varepsilon,x_0+\varepsilon)$\\
+\begin{proof}
+    Given: $|x-x_0|<\varepsilon$
+    \[ 
+        \iff -\varepsilon < x-x_0 <\varepsilon \quad\textbf{Feature 8} 
+    \]
+    \[
+        \iff x_0-\varepsilon < x <x_0+\varepsilon
+    \]
+    Which is the open interval $(x_0-\varepsilon,x_0+\varepsilon)$ based of the definition of the open interval
+\end{proof}
+This means whenever we see the term $|x-x_0|<\varepsilon$ it is the same as saying $x\in (x_0-\varepsilon,x_0+\varepsilon)$ and vice versa.\\
+
+\section{Punctured Environment}
+
+A \textbf{punctured neighborhood} is the same as a normal neighborhood of a point, except that the point itself is excluded from the interval.
+
+\noindent For a point \( x_0 \in \R \) and a number \( \varepsilon > 0 \), the punctured neighborhood is denoted as:
+\[
+(x_0 - \varepsilon, x_0 + \varepsilon) \backslash \{x_0\}
+\]
+\textbf{Example:}  
+For \( x_0 = 4 \) and \( \varepsilon = 0.5 \), the punctured neighborhood is:
+\[
+(3.5, 4.5) \backslash \{4\}
+\]
+In this case, the interval is the same as the neighborhood of $4$, but the point $4$ itself is excluded.
+
+\subsection{Bounded Real Groups}
+\textbf{Group Bounded From Above}\\
+Given a group of \textbf{Real Elements} $A\subset \R$\\
+$A$ is bounded from above $\iff$ $\exists\; M\in \R$ such that $\forall a\in A\;  a\leq M$\\
+\textbf{Translation In English}\\
+$A$ is bounded from above \textbf{If And Only If} exists a real number $M$ such that for every element in $A$ , $M$ is bigger or equal to every element in $A$\\
+\textbf{Group Bounded From Below}\\
+$A$ is bounded from above $\iff$ $\exists\; m\in \R$ such that $\forall a\in A\;  a\geq m$\\
+\textbf{Bounded Group}\\
+$A$ is bounded $\iff\; \exists \; m,M \in \R$ such that $\forall \; a\in A \; m<a<M$\\
+A group is bounded $\iff$ it is bounded from above and below\\
+
+\noindent \textbf{Question:}\\
+$A$ is bounded $\iff \exists \; K\in \R$ such that $\forall x\in A \; |x|\leq K$\\
+This is an $\iff$ question, \textbf{If And Only If} question, which means that we have to proof both sides.
+\begin{proof}
+    
+    $\Longleftarrow$\\
+    Given: $\forall x\in A \quad|x|\leq K$\\
+    \[
+        \Longrightarrow -K\leq x\leq K \quad\textbf{Feature 8}
+    \]
+    $\forall x\in A \; -K\leq x\leq K$ which means that the group $A$ is bounded\\
+    Now the other side of the proof\\
+    $\Longrightarrow$\\
+    Given: $A$ is bounded\\
+    \[
+        \Longrightarrow \exists \; m,M \in \R \quad\text{such that}\; \forall x\in A \quad m\leq x\leq M
+    \]
+    Let $K = max\{|m|,|M|\}$\\
+    $M \leq |M|$ \textbf{Feature 2} $\Longrightarrow M\leq |M|\leq K \Longrightarrow M\leq K$\\
+    $-m \leq |m|$ \textbf{Feature 2} $\Longrightarrow \; m\geq -|m| \Longrightarrow -K\leq -|m| \leq m\Longrightarrow -K\leq m$\\
+    \[
+        \Longrightarrow \forall x\in A \quad -K\leq m\leq x
+    \]
+    And\\
+    \[
+        \Longrightarrow \forall x\in A \quad x\leq M\leq K
+    \]
+    \[
+        \Longrightarrow \forall x\in A -K\leq m\leq x\leq M\leq K
+    \]
+    \[
+        \Longrightarrow -K\leq x\leq K
+    \]
+    \[
+        \Longrightarrow |x|\leq k \quad \textbf{Feature 8}
+    \]
+\end{proof}
+\noindent \textbf{Examples}\;:\\
+$\N = \{1,2,3,4,\ldots\}$ bounded from below, and $1$ is it's lower bound, on the other hand it is not bounded from above\\
+$(1,4)$ is a bounded group, where $1$ is it's lower bound, and $4$ is it's upper bound.\\
+
+
+\section{Supermum and Infimum}
+\subsection{Supermum}
+$S$ is called the \textbf{Supermum} of group $A$ $\iff$ it is the least upper bound of group $A$.\\
+\textbf{Example For Intuition}\\
+If we look at the open interval $B= (1,4)$ , $5$ is an upper bound of B, $6$ is an upper bound of $B$ , $4.31$ is an upper bound of $B$ $\ldots$\\
+$4$ is also an upper bound of $B$, but it is the least upper bound, meaning if we pick a number less than $4$, let's say $3.7$, then there exists an element in $B$ such that that element is bigger than $3.7$.\\
+\subsubsection{Understanding The Supermum}
+We know for a number to be called a \textbf{Supermum} of $A$.\\
+First, it has to be an upper bound of $A$, meaning $\forall a\in A\quad a\leq S$\\
+Second, it has to be the least upper bound, meaning as we discussed in the \textbf{Example}, If we pick a number lower than it, there exists an element in $A$ that is bigger than that number.\\
+\textbf{How do we write it in maths terms/language?}\\
+We know that if we subtract the least upper bound from any positive number, then it's gonna be smaller than the least upper bound.\\
+If we use our example, We picked $3.7$, which is $4-0.3$, if we pick $3.9$ it is $4-0.1$ which are not upper bounds.\\
+For any positive number let's call it $\varepsilon$, if we subtract it from our \textbf{Supermum}, then there exists an element in our group that is bigger than the result of subtracting the \textbf{Supermum} from a positive number .\\
+$\forall\; \varepsilon > 0 \; \exists \; a\in A$ such that \; $S-\varepsilon < a$\\
+
+\subsubsection{Definition Of The Supermum}
+$S$ is the \textbf{Supermum} of group $A \iff$\\
+\begin{enumerate}
+    \item $\forall\; a\in A \quad a\leq S$
+    \item $\forall\; \varepsilon > 0 \; \exists\; a\in A$ such that $S-\varepsilon<a$
+\end{enumerate}
+Given a group $A$, If these rules apply on a number $S$, then it is the \textbf{Supermum} of group $A$.\\
+
+\subsection{Infimum}
+The \textbf{Infimum} is the biggest lower bound\\
+\textbf{Example}\\
+If we look at the open interval $(1,4)$, $1$ is the least upper bound of the group $(1,4)$.\\
+\subsubsection{Definition Of The Infimum}
+$I$ is the \textbf{Infimum} of group $A$ $\iff$ 
+\begin{enumerate}
+    \item $\forall \; a\in A \quad I\leq a$
+    \item $\forall \varepsilon>0\quad \exists\; a\in A$ such that $a<I+\varepsilon$
+\end{enumerate}
+
+\section{Axiom Of Completeness}
+For all \textbf{Bounded} from above , \textbf{Not Empty} groups of real numbers exists a \textbf{Supermum} for that group.\\
+For all \textbf{Bounded} from below , \textbf{Not Empty} groups of real numbers exists an \textbf{Infimum} for that group.\\
+This is really important, because now we know that forevery bounded none empty group of real numbers exists a \textbf{Supermum} and an \textbf{Infimum}\\
+If we look at the group $A = \{x\in \Q\; | \; x<\sqrt{2}\}$, it does not have a \textbf{Supermum} in $\Q$, because $\sqrt{2}$ as we proved is not rationl meaning $\notin \Q$.\\
