@@ -5,8 +5,8 @@
 \contentsline {subsection}{\numberline {1.2.2}Examples of Groups}{5}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Logical Operators and Proofs}{6}{subsection.1.2.3}%
 \contentsline {subsubsection}{Question 1}{6}{section*.2}%
-\contentsline {subsection}{\numberline {1.2.4}Question 2}{6}{subsection.1.2.4}%
-\contentsline {subsection}{\numberline {1.2.5}Proving $\sqrt {2}$ is Irrational}{7}{subsection.1.2.5}%
+\contentsline {subsubsection}{Question 2}{6}{section*.3}%
+\contentsline {subsection}{\numberline {1.2.4}Proving $\sqrt {2}$ is Irrational}{7}{subsection.1.2.4}%
 \contentsline {section}{\numberline {1.3}Density of Rational Numbers}{7}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Absolute Value}{8}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Definition}{8}{subsection.1.4.1}%
@@ -18,10 +18,10 @@
 \contentsline {subsection}{\numberline {1.6.1}Bounded Real Groups}{11}{subsection.1.6.1}%
 \contentsline {section}{\numberline {1.7}Supermum and Infimum}{13}{section.1.7}%
 \contentsline {subsection}{\numberline {1.7.1}Supermum}{13}{subsection.1.7.1}%
-\contentsline {subsubsection}{Understanding The Supermum}{14}{section*.3}%
-\contentsline {subsubsection}{Definition Of The Supermum}{15}{section*.4}%
+\contentsline {subsubsection}{Understanding The Supermum}{14}{section*.4}%
+\contentsline {subsubsection}{Definition Of The Supermum}{15}{section*.5}%
 \contentsline {subsection}{\numberline {1.7.2}Infimum}{15}{subsection.1.7.2}%
-\contentsline {subsubsection}{Definition Of The Infimum}{15}{section*.5}%
+\contentsline {subsubsection}{Definition Of The Infimum}{15}{section*.6}%
 \contentsline {section}{\numberline {1.8}Axiom Of Completeness}{16}{section.1.8}%
 \contentsline {chapter}{\numberline {2}Sequences}{17}{chapter.2}%
 \contentsline {section}{\numberline {2.1}What is a Sequence}{17}{section.2.1}%
@@ -31,9 +31,23 @@
 \contentsline {subsection}{\numberline {2.2.2}Understanding The Limit}{19}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Visually Seeing The Limit}{19}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}How To Prove The Limit Of A Sequence Is L}{21}{subsection.2.2.4}%
-\contentsline {subsubsection}{Question 1: Proving \(\displaystyle \qopname \relax m{lim}_{n \to \infty } \frac {1}{n} = 0\)}{22}{section*.6}%
-\contentsline {subsubsection}{Question 2: Proving \(\displaystyle \qopname \relax m{lim}_{n \to \infty } c = c\)}{23}{section*.7}%
-\contentsline {subsubsection}{Question 3: Proving \(\displaystyle \qopname \relax m{lim}_{n \to \infty } \frac {3n^2-5n+4}{n^2+4n-5} = 3\)}{24}{section*.8}%
+\contentsline {subsubsection}{Question 1: Proving \(\displaystyle \qopname \relax m{lim}_{n \to \infty } \frac {1}{n} = 0\)}{22}{section*.7}%
+\contentsline {subsubsection}{Question 2: Proving \(\displaystyle \qopname \relax m{lim}_{n \to \infty } c = c\)}{23}{section*.8}%
+\contentsline {subsubsection}{Question 3: Proving \(\displaystyle \qopname \relax m{lim}_{n \to \infty } \frac {3n^2-5n+4}{n^2+4n-5} = 3\)}{24}{section*.9}%
 \contentsline {section}{\numberline {2.3}The Limit Of A Sequence Is Unique}{26}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}IntuProof In Plain English}{26}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.1}Proof In Plain English}{26}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Mathematical Proof}{28}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Bounded Sequences}{30}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Definitions}{30}{subsection.2.4.1}%
+\contentsline {subsubsection}{Practice Question}{30}{section*.10}%
+\contentsline {subsection}{\numberline {2.4.2}Equivalent Definition For The Limit Of A Sequence}{30}{subsection.2.4.2}%
+\contentsline {subsubsection}{Floor/Ceiling Functions}{31}{section*.11}%
+\contentsline {section}{\numberline {2.5}Limit Theorems}{33}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Limit Arithmetics}{33}{subsection.2.5.1}%
+\contentsline {subsubsection}{Proof 1}{34}{section*.12}%
+\contentsline {subsubsection}{Proof 2}{35}{section*.13}%
+\contentsline {subsubsection}{Proof 3}{36}{section*.14}%
+\contentsline {subsubsection}{Proof 5}{38}{section*.15}%
+\contentsline {subsubsection}{Proof 7}{38}{section*.16}%
+\contentsline {subsection}{\numberline {2.5.2}The 0 - Bounded Theorem}{40}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Sandwich Theorem}{40}{subsection.2.5.3}%

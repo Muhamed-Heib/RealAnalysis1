@@ -151,7 +151,7 @@ All of this works if all the indexes are bigger than $2$, so we can't say that $
 There is a solution for this.\\
 $\forall\; \varepsilon>0 ,\; \exists\; N=max\{\frac{17}{\varepsilon},2\},$ such that $\forall\; n>N\Longrightarrow$
 \[
-    |\frac{3n^2-5n+4}{n^2+4n-5}-3|<\ldots<\frac{17}{N}<\varepsilon
+    |\frac{3n^2-5n+4}{n^2+4n-5}-3|<\ldots<\frac{17}{N}=\varepsilon
 \]
 If $\frac{17}{\varepsilon}>2$ then if $N = \frac{17}{\varepsilon}\Longrightarrow |\frac{3n^2-5n+4}{n^2+4n-5}-3|<\varepsilon$\\
 Otherwise, meaning if $\frac{17}{\varepsilon}\leq 2 \iff \frac{17}{2}\leq \varepsilon$ and for $N=2\Longrightarrow \frac{17}{N}=\frac{17}{2}\leq \varepsilon$\\
@@ -159,7 +159,7 @@ Otherwise, meaning if $\frac{17}{\varepsilon}\leq 2 \iff \frac{17}{2}\leq \varep
 
 
 \section{The Limit Of A Sequence Is Unique}
-\subsection{IntuProof In Plain English}
+\subsection{Proof In Plain English}
 If a sequence has a limit, then it is \textbf{Unique}. Before we got to the mathematical proof, i'm gonna explain in plain english using the knowledge we know so far to prove how the limit of a sequence is unique.\\
 Given a sequence $a_n\rightarrow L,$ Using the definition of a limit: $\forall\; \varepsilon>0,\; \exists\; \N>0,$ such that for all indexes$(n)$ bigger than $N\Longrightarrow$
 \[
@@ -167,7 +167,7 @@ Given a sequence $a_n\rightarrow L,$ Using the definition of a limit: $\forall\;
 \]
 Meaning after a certain point $N$ every term of the sequence $a_n$ is in 
 \[
-    L-\varepsilon<a_n<L+\varepsilon\; \equiv\; L-\varepsilon<a_n<L+\varepsilon\\
+    |a_n-L|<\varepsilon\; \equiv\; L-\varepsilon<a_n<L+\varepsilon\\
 \]
 If there are two limits $(L,K), L<K$, then the sequence is gonna be approaching two limits $L$ and $K$.\\
 \textbf{First Limit}\\
@@ -206,10 +206,319 @@ For $\varepsilon =\frac{K-L}{3}\;\exists\; N=max\{N_1,N_2\}$ such that $\forall\
     K-\varepsilon<a_n<K+\varepsilon\; \equiv\; K-\frac{K-L}{3}<a_n<K+\frac{K-L}{3}
 \]
 \[
-    \frac{3K}{3}-\frac{K-L}{3}<a_n<\frac{3K}{3}+\frac{K-L}{3}\; \equiv\; \frac{2K-L}{3}<a_n<\frac{4K-L}{3}
+    \frac{3K}{3}-\frac{K-L}{3}<a_n<\frac{3K}{3}+\frac{K-L}{3}\; \equiv\; \frac{2K+L}{3}<a_n<\frac{4K-L}{3}
 \]
 \[
-    \frac{2K-L}{3}<a_n<\frac{4K-L}{3}
+    \frac{2K+L}{3}<a_n<\frac{4K-L}{3}
 \]
 We know that this statment is true, because if we're looking for all indexes bigger than $max\{N_1,N_2\}$ then we're looking for all indexes bigger than $N_1$.\\
-At the same time, we know that if we're looking at all the indexes bigger than $max\{N_1,N_2\}$, then we're looking for all the indexes bigger than $N_2$
+At the same time, we know that if we're looking at all the indexes bigger than $max\{N_1,N_2\}$, then we're looking for all the indexes bigger than $N_2\Longrightarrow$
+\[
+    L-\frac{K-L}{3}<a_n<L+\frac{K-L}{3}\; \equiv\; \frac{3L}{3}-\frac{K-L}{3}<a_n<\frac{3L}{3}+\frac{K-L}{3}
+\]
+\[
+    \frac{4L-K}{3}<a_n<\frac{K+2L}{3}
+\]
+Given that $L<K \Longrightarrow \frac{K+2L}{3}<\frac{2K+L}{3}\Longrightarrow$
+\[
+    \frac{4L-K}{3}<a_n<\frac{K+2L}{3}<\frac{2K+L}{3}<a_n<\frac{4K-L}{3}
+\]
+Meaning for all the indexes bigger than $N$ the terms of the sequence are located in two different places, which is a contradiction.\\\\
+\textbf{Note:} This is not an easy proof to grasp and understand, if you did not understand it at first, give it some time, go over it a couple of time, maybe sleep on it, but rest assure when you're reviewing the material in a couple of weeks, this proof is gonna be as smooth as butter.\\
+
+
+\newpage
+
+\section{Bounded Sequences}
+\subsection{Definitions}
+\begin{enumerate}
+    \item A sequence $a_n$ is bounded from above $\iff \exists\; M\in \R,$ such that $\forall n\Longrightarrow a_n\leq M$
+    \item A sequence $a_n$ is bounded from below $\iff \exists\; m\in \R,$ such that $\forall n\Longrightarrow m\leq a_n$
+    \item A sequence $a_n$ is bounded $\iff$ it is bounded from above and below
+\end{enumerate}
+
+\subsubsection{Practice Question}
+$a_n$ is bounded $\iff \exists\; K\in \R$ such that $\forall\; n \Longrightarrow |a_n|\leq K$\\
+This is an identical question to the question in the \textbf{Groups} section that you should be able to solve on your own.\\
+
+\subsection{Equivalent Definition For The Limit Of A Sequence}
+$\forall\; \varepsilon>0,\; \exists\; N\in \N,$ such that $\forall n>N \Longrightarrow$
+\[
+    |a_n-L|<\varepsilon
+\]
+In the previous definition states that exists a real number $N$, but in this one it states that exists a natural number $N$, they're two different definition, we want to prove that they are equivalent.\\
+\subsubsection{Floor/Ceiling Functions}
+\[
+    \lfloor x\rfloor = max\{m\in \Z\;|\; m\leq x\}
+\]
+\[
+    \lceil x\rceil = min\{m\in \Z\;|\; m\geq x\}
+\]
+The Floor of $x,\; \lfloor x\rfloor$ returns the closest integer to $x$ from below\\
+The Ceiling of $x,\; \lceil x\rceil$ returns the closest integer to $x$ from above\\
+\textbf{Examples:}\\
+\[
+    \lfloor 5.4\rfloor = 5,\; \lfloor -3.2\rfloor = -4,\; \lfloor 3\rfloor = 3
+\]
+\[
+    \lceil 5.4\rceil = 6,\; \lceil -3.2\rceil = -3,\; \lceil 3\rceil = 3
+\]
+\textbf{Features of $\lfloor x\rfloor,\; \lceil x\rceil$}\\
+\[
+    \lfloor x\rfloor\leq x \qquad x\leq\lceil x\rceil
+\]
+If we look at any real number $N\in \R,\; N\leq \lceil N\rceil,\; \lceil N\rceil\in \N$
+Using the definition of a limit we know:\\
+$\forall\: \varepsilon>0 \:, \exists \: N\in \R,$ such that $\forall \: n>N \Longrightarrow$\\
+\[
+    |a_n-L|<\varepsilon
+\]
+$\forall\; n>\lceil N\rceil$, meaning we're looking at the indexes bigger than $\lceil N\rceil\Longrightarrow N\leq\lceil N\rceil<n,\;$ meaning we're also looking at the indexes bigger than $N\Longrightarrow$\\
+\[
+    |a_n-L|<\varepsilon
+\]
+
+\noindent\textbf{Theorem:}\\
+$a_n\rightarrow L \Longrightarrow a_n$ is bounded\\
+\begin{proof}
+    $a_n\rightarrow L \Longrightarrow \forall\;\text{for} \varepsilon=1,\; \exists\; N\in \N,$ such that $\forall n>N\Longrightarrow$
+    \[
+        |a_n-L|<1 \iff L-1<a_n<L+1
+    \]
+    Since the sequence approaches $L$ this means that for any positive number $\varepsilon\; \exists N\ldots$\\
+    Therefor i can pick any positive number i want, and it is still going to work, because it works with any positive number.\\
+    \textbf{Note:} You can pick any positive number instead of $1$ and the proof still works the same.\\
+    If we look at the terms of the sequence:
+    \[
+        a_1,a_2,a_3,\ldots,a_N,a_{N+1},\ldots,a_n
+    \]
+    We know for a fact that forall indexes after $N$ the sequence is bounded because of the definition of the limit $\forall n>N\Longrightarrow L-1<a_n<L+1$\\
+    That leaves us with the first $N$ terms, if we look at the group $\{a_1,a_2,\ldots,a_N\}$, it is finite group, meaning it has a maximum and a minimum.\\
+    \[
+        K=max\{a_1,a_2,\ldots,a_N\},\; k = min\{a_1,a_2,\ldots,a_N\}
+    \]
+    $\forall\; 1\leq n\leq N \Longrightarrow k\leq a_n\leq K$, although the first $N$ terms are bounded, and all the terms after $N$th term are bounded as well, this does not prove that the sequence is bounded.\\
+    \textbf{Reminder}:\\
+    A sequence is bounded $\iff \exists\; m,M\: ,$ such that $\forall n\Longrightarrow m\leq a_n\leq M$\\
+    Let $M = max\{K,L+1\}$ , $m = min\{k,L-1\}\Longrightarrow$\\
+    \[
+    \forall\; n \quad m\leq a_n\leq M
+    \]
+\end{proof}
+
+
+\section{Limit Theorems}
+\subsection{Limit Arithmetics}
+Given: $a_n\rightarrow L,\; b_n\rightarrow K\Longrightarrow$
+\begin{enumerate}
+    \item $\forall c\in \R\Longrightarrow c\cdot a_n \rightarrow c\cdot L$
+    \item $a_n+b_n\rightarrow L+K$
+    \item $a_n\cdot b_n\rightarrow L\cdot K$
+    \item If $k\neq0,\forall\; n\; b_n\neq 0 \Longrightarrow \frac{a_n}{b_n}\rightarrow \frac{L}{K}$
+    \item $a_n\rightarrow L \Longrightarrow |a_n|\rightarrow |L|$
+    \item $a_n\rightarrow 0 \iff |a_n|\rightarrow 0$
+    \item $a_n\rightarrow L,\; L\geq 0,\; a_n\geq 0\; \forall\; n\Longrightarrow \sqrt{a_n}\rightarrow \sqrt{L}$
+\end{enumerate}
+\subsubsection{Proof 1}
+We want to prove that $c\cdot a_n\rightarrow c\cdot L$ meaning:\\
+We want to prove $\forall\; \varepsilon>0,\; \exists\; N\in \R,$ such that $\forall n>N\Longrightarrow$\\
+\[
+    |c\cdot a_n-c\cdot L|=|c\cdot(a_n-L)| = |c|\cdot|a_n-L|<\varepsilon
+\]
+\[
+    \iff |a_n-L|<\frac{\varepsilon}{|c|} \quad \text{For\;} c\neq 0
+\]
+ 
+$a_n\rightarrow L\Longrightarrow \text{For}\; \frac{\varepsilon}{|c|},\; \exists\; N_1\in \R,$ such that $\forall n>N\Longrightarrow$
+\[
+    |a_n-L|<\frac{\varepsilon}{|c|}
+\]
+$\exists\; N=N_1$ such that $\forall n>N_1\Longrightarrow$
+\[
+    |c\cdot a_n-c\cdot L|<\varepsilon
+\]
+Remember the definition of a limit works for any positive number, we just named it $\varepsilon$ that's why we say $\forall\; \varepsilon>0$, as you can see $\frac{\varepsilon}{|c|}$ is a positive number, this is why we can pick it to be our positive number.\\
+The theorem works for $c\neq 0$ although it states that $\forall\; c\in \R$, meaning we have to prove that it works for $c=0$.\\
+For $c=0,\; 0\cdot a_n = 0$, the sequence $0\cdot a_n$ is a constant sequence and we proved $\forall\; c\in \R\; \lim_{n\to\infty} c = c \Longrightarrow 0\cdot a_n \rightarrow 0$\\
+
+\subsubsection{Proof 2}
+We want to prove $a_n+b_n\rightarrow L+K$\\
+We want to prove that $\forall\; \varepsilon>0,\; \exists N\in \R,\;$ such that $\forall\; n>N\Longrightarrow$
+\[
+    |(a_n+b_n)-(L+K)|=|(a_n-L)+(b_n-K)|
+\]
+\[
+    |(a_n-L)+(b_n-K)|\leq |a_n-L|+|b_n-K|<\varepsilon \quad \textbf{Feature 6}
+\]
+\[
+    \iff |a_n-L|<\frac{\varepsilon}{2}\; \text{And\;} |b_n-K|<\frac{\varepsilon}{2}
+\]
+$a_n\rightarrow L\Longrightarrow$ For any positive number the definition of a limit works on it.\\
+For $\frac{\varepsilon}{2}\; \exists\; N_1,\;$ such that $\forall n>N_1 \Longrightarrow$
+\[
+    |a_n-L|<\frac{\varepsilon}{2}
+\]
+$b_n\rightarrow K\Longrightarrow$ For any positive number the definition of a limit works on it.\\
+For $\frac{\varepsilon}{2}\; \exists\; N_2,\;$ such that $\forall n>N_2 \Longrightarrow$
+\[
+    |b_n-K|<\frac{\varepsilon}{2}
+\]
+For $N=max\{N_1,N_2\},\;\forall\; n>N$ for all indexes bigger than $N$ are also bigger or equal to $N_1$ and $N_2\Longrightarrow$
+\[
+    |a_n-L|<\frac{\varepsilon}{2} \quad \text{And} \quad |b_n-K|<\frac{\varepsilon}{2}
+\]
+
+
+\subsubsection{Proof 3}
+We want to prove that $a_n\cdot b_n\rightarrow L\cdot K$\\
+We want to prove that $\forall\; \varepsilon>0,\; \exists\; N\in \R,\;$ such that $\forall\; n>N \Longrightarrow$
+\[
+    |a_n\cdot b_n -L\cdot K|= |a_n b_n-a_nK+a_nK-LK|
+\]
+\[
+    |a_n b_n-a_nK+a_nK-LK| = |a_n(b_n-K)+K(a_n-L)|
+\]
+\[
+    |a_n(b_n-K)+K(a_n-L)|\leq |a_n(b_n-K)|+|K(a_n-L)|\quad \textbf{Feature 6}
+\]
+\[
+    |a_n(b_n-K)|+|K(a_n-L)|<\varepsilon
+\]
+We want to prove that $|a_n(b_n-K)|+|K(a_n-L)|<\varepsilon$ in order to do so we have to prove that $|a_n(b_n-K)|<\frac{\varepsilon}{2}$ and $|K(a_n-L)|<\frac{\varepsilon}{2}$\\
+$a_n$ is convergent, that means that it is bounded, we proved earlier that every convergent sequence is bounded.\\
+$\Longrightarrow \exists\; M\in \R\;$ such that $|a_n|<M$ and $|K|<M$ \textbf{You'll see why later}.\\
+\[
+    \Longrightarrow |a_n(b_n-K)|\leq |M(b_n-K)| = |M|\cdot|b_n-K|
+\]
+\[
+   |M|\cdot|b_n-K|<\frac{\varepsilon}{2} \iff |b_n-K|<\frac{\varepsilon}{2M}
+\]
+This is what we want to prove, important to note that $\frac{\varepsilon}{2M}$ is positive.\\
+$b_n\rightarrow K\;,$ Which is why we can say for $\frac{\varepsilon}{2M},\; \exists\; N_1\in \R,\;$ such that $\forall\; n>N_1\Longrightarrow$
+\[
+    |b_n-k|<\frac{\varepsilon}{2M}
+\] 
+\[
+    |K(a_n-L)|= |K|\cdot |a_n-L|
+\]
+\[
+    |K|\cdot |a_n-L|<\frac{\varepsilon}{2} \iff |M|\cdot|a_n-L|<\frac{\varepsilon}{2}
+\]
+\[
+    |M|\cdot |a_n-L|<\varepsilon \iff |a_n-L|<\frac{\varepsilon}{2M}
+\]
+We could've continued to prove this theory without getting rid of the $K$, but if we haven't, we would've had to prove the case were $K = 0$\\
+\textbf{What would've happened}:\\
+\[
+    |K|\cdot|a_n-L|<\frac{\varepsilon}{2} \iff |a_n-L|<\frac{\varepsilon}{2K}
+\]
+Which is true for $K\neq 0$, then we would have another proof for when $K=0$, now if we get a number $M$ which bigger than $|K|$, then this number $M$ is bigger than $0$, because $0\leq|K|<M \Longrightarrow 0<M$\\\\
+We want to prove that $|a_n-L|<\frac{\varepsilon}{2M}$, important to note that $\frac{\varepsilon}{2M}$ is positive, $a_n\rightarrow L$, Which is why we can say\\
+\noindent For $\frac{\varepsilon}{2M},\; \exists\; N_2\in \R,\;$ such that $\forall n>N_2\Longrightarrow$
+\[
+    |a_n-L|<\frac{\varepsilon}{2M}
+\]
+$\forall\; \varepsilon>0,\;\exists\; N=max\{N_1,N_2\},$ such that $\forall\; n>N\Longrightarrow$
+\[
+    |a_nb_n-LK|<\varepsilon
+\]
+
+\subsubsection{Proof 5}
+We want to prove that $\forall\; \varepsilon>0,\;\exists\; N\in \R,\;$ such that $\forall\; n>N\Longrightarrow$
+\[
+    \Big| |a_n| - |L| \Big| \leq \Big| a_n-L \Big|<\varepsilon \quad \textbf{Feature 7}
+\]
+We want to prove that $|a_n-L|<\varepsilon$\\
+$a_n\rightarrow L \Longrightarrow \forall\; \varepsilon>0,\; \exists N\in \R,\;$ such that $\forall n>N\Longrightarrow$
+\[
+    |a_n-L|<\varepsilon
+\]
+
+\subsubsection{Proof 7}
+We want to prove $\sqrt{a_n}\rightarrow \sqrt{L}$, given that $L\geq 0,\; a_n\geq 0\; \forall\; n$\\
+We want to prove that $\forall\; \varepsilon>0,\; \exists\; N\in \R,\;$ such that $\forall\; n>N\Longrightarrow$
+\[
+    |\sqrt{a_n}-\sqrt{L}|=\Big|\frac{(\sqrt{a_n}-\sqrt{L})\cdot (\sqrt{a_n}+\sqrt{L})}{\sqrt{a_n}+\sqrt{L}} \Big| = \Big|\frac{a_n-L}{\sqrt{a_n}+\sqrt{L}}\Big|
+\] 
+$a_n\geq 0 \; \forall\; n \Longrightarrow \sqrt{a_n}+\sqrt{L}\leq\sqrt{L}\iff \frac{1}{\sqrt{a_n}+\sqrt{L}}\leq\frac{1}{\sqrt{L}}\; \forall\; L\neq 0$
+\[
+    \Big|\frac{a_n-L}{\sqrt{a_n}+\sqrt{L}}\Big|\leq\Big|\frac{a_n-L}{\sqrt{L}}\Big| = \frac{|a_n-L|}{\sqrt{L}}
+\]
+\[
+    \frac{|a_n-L|}{\sqrt{L}}<\varepsilon \iff |a_n-L|<\varepsilon\sqrt{L}
+\]
+For $\varepsilon\sqrt{L},\; \exists\; N\in \R,\;$ such that $\forall\; n>N\Longrightarrow$
+\[
+    |a_n-L|<\varepsilon\sqrt{L}
+\]
+We have to prove when $L=0$, we have to prove that $\forall\; \varepsilon>0,\; \exists\; N\in\R,\;$ such that $\forall\; n>N\Longrightarrow$
+\[
+    |\sqrt{a_n}-\sqrt{0}| = |\sqrt{a_n}| = \sqrt{a_n}
+\]
+\[
+    \sqrt{a_n}<\varepsilon \iff a_n<\varepsilon^2
+\]
+For $\varepsilon^2,\; \exists\; N\in\R,\;$ such that $\forall n>N\Longrightarrow$
+\[
+    |a_n-0|=a_n<\varepsilon^2
+\]
+
+\newpage
+
+\subsection{The 0 - Bounded Theorem}
+Given: $a_n\rightarrow 0,\; b_n$ is bounded $\Longrightarrow a_nb_n\rightarrow 0$
+\begin{proof}
+    We want to prove $\forall\; \varepsilon>0,\; \exists\; N\in \R,\;$ such that $\forall\; n>N\Longrightarrow$
+    \[
+        |a_nb_n-0|=|a_nb_n| = |a_n|\cdot|b_n|<\varepsilon
+    \]
+    $b_n$ is bounded $\Longrightarrow$
+    \[
+        \exists\; M\in \R,\; \text{such that}\; |b_n|<M
+    \]
+    \[
+        \Longrightarrow |a_n|\cdot |b_n|\leq M\cdot|a_n|
+    \]
+    \[
+        M|a_n|<\varepsilon \iff |a_n|<\frac{\varepsilon}{M}
+    \]
+    Meaning we need to prove that $|a_n|<\frac{\varepsilon}{M}$, since $a_n\rightarrow 0$, for $\frac{\varepsilon}{M},\; \exists\; N\in \R,\;$ such that $\forall\; n>N\Longrightarrow$
+    \[
+        |a_n-0| = |a_n|<\frac{\varepsilon}{M}
+    \] 
+\end{proof}
+
+\subsection{Sandwich Theorem}
+Given: $\forall\; n\quad a_n\leq b_n\leq c_n,\;$ and $a_n\rightarrow L,\; c_n\rightarrow L \Longrightarrow b_n\rightarrow L$\\
+$b_n\rightarrow L \iff \forall\; \varepsilon>0,\; \exists\; N\in \R,\;$ such that $\forall\; n>N \Longrightarrow$
+\[
+    |b_n-L|<\varepsilon
+\]
+This is what it means for a sequence to convergent to $L$, which is what we want to prove.\\
+\begin{proof}
+    $a_n\rightarrow L \Longrightarrow$\\
+    $\forall\; \varepsilon>0,\;\exists\; N_1\in \R,\;$ such that $\forall\; n>N\Longrightarrow$
+    \[
+        |a_n-L|<\varepsilon \iff L-\varepsilon<a_n<L+\varepsilon
+    \]
+    $c_n\rightarrow L \Longrightarrow$\\
+    $\forall\; \varepsilon>0,\;\exists\; N_2\in \R,\;$ such that $\forall\; n>N\Longrightarrow$
+    \[
+        |c_n-L|<\varepsilon \iff L-\varepsilon<c_n<L+\varepsilon
+    \]
+    $\forall\; n>N_1 \Longrightarrow$
+    \[
+        L-\varepsilon<a_n\leq b_n
+    \]
+    $\forall\; n>N_2 \Longrightarrow$
+    \[
+        b_n\leq c_n<L+\varepsilon
+    \]
+    $\exists\; N=max\{N_1,N_2\},\;$ such that $\forall\; n>N\Longrightarrow$
+    \[
+        L-\varepsilon<a_n\leq b_n\leq c_n<L+\varepsilon
+    \]
+    \[
+        \Longrightarrow L-\varepsilon<b_n<L+\varepsilon
+    \]
+\end{proof}
