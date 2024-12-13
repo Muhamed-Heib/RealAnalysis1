@@ -127,7 +127,7 @@ This contradicts our assumption that the fraction $\frac{m}{n}$ is at it's simpl
 
 
 \section{Density of Rational Numbers}
-$\forall x<y\in \R \; \exists q\in \Q$ such that $x<q<y$\\ 
+$\forall\; x<y\in \R, \; \exists\; q\in \Q$ such that $x<q<y$\\ 
 
 \begin{proof}
     \[
@@ -265,8 +265,11 @@ This is an $\iff$ question, \textbf{If And Only If} question, which means that w
     \]
 \end{proof}
 \noindent \textbf{Examples}\;:\\
-$\N = \{1,2,3,4,\ldots\}$ bounded from below, and $1$ is it's lower bound, on the other hand it is not bounded from above\\
-$(1,4)$ is a bounded group, where $1$ is it's lower bound, and $4$ is it's upper bound.\\
+\begin{enumerate}
+    \item $\N = \{1,2,3,4,\ldots\}$ bounded from below, and $1$ is it's lower bound, on the other hand it is not bounded from above.\\
+    \item $(1,4)$ is a bounded group, where $1$ is it's lower bound, and $4$ is it's upper bound.\\
+
+\end{enumerate}
 
 
 \section{Supermum and Infimum}
@@ -309,3 +312,111 @@ For all \textbf{Bounded} from above , \textbf{Not Empty} groups of real numbers 
 For all \textbf{Bounded} from below , \textbf{Not Empty} groups of real numbers exists an \textbf{Infimum} for that group.\\
 This is really important, because now we know that forevery bounded none empty group of real numbers exists a \textbf{Supermum} and an \textbf{Infimum}\\
 If we look at the group $A = \{x\in \Q\; | \; x<\sqrt{2}\}$, it does not have a \textbf{Supermum} in $\Q$, because $\sqrt{2}$ as we proved is not rationl meaning $\notin \Q$.\\
+
+\newpage
+
+\section{Mathematical Induction}
+\subsection{Introduction}
+We say that the claim $P(x)$ is true $\forall\; x\in A = \{a_1,a_2,a_3,...,a_n\} \iff P(a_1), P(a_2), P(a_3),\ldots, P(a_n)$ are all true.\\
+For example, we want to prove that the claim: $1+2+3+\ldots+n = \frac{(1+n)\cdot n}{2}$ is true $\forall\; n\in \{1,2,3,4,5,6,7\}$\\
+We can do this by checking if the claim $P(n):\; (1+2+3+\ldots+n = \frac{(n+1)\cdot n}{2})$ is true, by checking each element in the set $\{1,2,3,\ldots,8\}$ manually.\\
+Meaning if we substitute $1$ in the claim $1 = \frac{(1+1)\cdot 1}{2}$ then we can see that the claim is true for $n = 1$ or $P(1)$ is true.\\
+$P(2): (1+2) = \frac{(1+2)\cdot 2}{2}$ which is true.\\
+$P(3): (1+2+3) = \frac{(1+3)\cdot 3}{2}$ which is also true.\\
+We can do this manually for each element in the set, but i'm not going to, because at this point I think you get the idea.\\
+Now I want you to prove that the claim above is true $\forall\; n\in \N$.\\
+Meaning we want to prove that $P(1),P(2),P(3),\ldots$ are all true.\\
+We can't do this manually because there are infinitely many elements in $\N$\\
+
+
+
+\subsection{How Mathematical Induction Work}
+If we know that $P(1)$ is true, and we can prove that if given any natural number (let's name it) $k$, $P(k)$ is true and $P(k+1)$ is true, then $\forall \; n\in \N\; P(n)$ is true.\\
+Why does this work, If we know that $P(1)$ is true, then $P(2)$ is true, because we proved that if $\forall\; k\in \N\; P(k)$ is true $\Longrightarrow P(k+1)$ is true.\\
+same goes for $P(3)$,\\
+$P(2)$ is true $\Longrightarrow P(3)$ is true.\\
+$P(3)$ is true $\Longrightarrow$ $P(4)$ is true.\\
+$P(4)$ is true $\Longrightarrow$ $P(5)$ is true.\\
+
+\[
+    P(1) \Longrightarrow P(2) \Longrightarrow P(3) \Longrightarrow P(4) \Longrightarrow P(5) \Longrightarrow P(6) \ldots\\
+\]
+As you can see by doing this we can prove for any natural number that a claim is true.\\
+
+
+
+\subsection{Mathematical Induction Formal Proof}
+You need to prove two things in order to prove that a claim for all natural numbers is true using Mathematical Induction.\\
+\begin{enumerate}
+    \item Induction Base: you want to prove manually that $P(1)$ is true.
+    \item Induction Assumption: you want to prove that given any natural number $k, P(k)$ is true that $P(k+1)$ is true.
+\end{enumerate}
+
+\newpage
+\subsubsection{Question 1}
+We want to prove that 
+\[
+    1+2+3+\ldots+n = \frac{(1+n)\cdot n}{2} \qquad \forall\; n\in \N\\
+\]
+Step 1: Induction Base\\
+\[
+    1 = \frac{1+1}{2} \Longrightarrow P(1) \text{ is true }.\\
+\]
+Step 2: Induction Assumption\\
+Let's assume that given any number $k \in \N$ that $P(k)$ is true.\\
+\[
+    \Longrightarrow 1+2+3+\ldots+k = \frac{(1+k)\cdot k}{2}
+\]
+Remember we want to prove that $P(k+1)$ using the Induction Assumption.\\
+Meaning that:
+\[
+    1+2+3+\ldots+k+(k+1) = \frac{(1+(k+1))\cdot (k+1)}{2} = \frac{(2+k)\cdot (k+1)}{2}\\
+\]
+We know that:
+\[
+    1+2+3+\ldots+k = \frac{(1+k)\cdot k}{2}
+\]
+Adding $(k+1)$ to both sides.
+\[
+    (1+2+3+\ldots+k)+(k+1) = \frac{(1+k)\cdot k}{2} + (k+1) = \frac{(1+k)\cdot k}{2} + \frac{2\cdot (k+1)}{2}
+\]
+$\frac{k+1}{2}$ is a common factor
+\[
+    1+2+3+\ldots+k+(k+1) = \frac{(k+1)}{2}\cdot (k+2) = \frac{(k+1)(k+2)}{2}
+\]
+And with that we proved that: $1+2+3+\ldots+n = \frac{(1+n)\cdot n}{2} \qquad \forall\; n \in\N$\\
+
+\subsubsection{Definition Of A Finite Set}
+A finite set $A$ means that the set $A$ has a finite amount of elements.\\
+$|A|$ gives us how many elements are in a set.\\
+\textbf{Elements In Sets Are Always Real Numbers In This Book}.\\
+\subsubsection{Question 2}
+Given a finite set of real numbers $A = \{a_1,a_2,a_3,\ldots,a_n\}$, we want to prove using Mathematical Induction that it has a maximum and a minimum.\\
+Another way to rephrase this question is to prove that $\forall\; n\in \N$ such that $|A| = n$ , $A$ has a maximum and a minimum.\\
+Step 1: Induction Base\\
+$A_1 = \{a_1\} \Longrightarrow max\{A_1\} = a_1,\; min\{A_1\} = a_1 \Longrightarrow P(1)$ is true.\\
+Step 2: Induction Assumption\\
+Let's assume that given any natural number $k$ that $P(k)$ is true.\\
+Meaning:
+\[
+    A_k = \{a_1,a_2,a_3,\ldots,a_k\} \text{ has a max } M_1 \text{ and a minimum } m_1
+\]
+$max\{A_1\} = M_1,\; min\{A_1\} = m_1$\\
+We want to prove that for all sets of real numbers $A_{k+1}$ such that $|A_{k+1}| = k+1\\ A_{k+1}$ has a maximum and a minimum.\\
+\[
+    A_{k+1} = \{a_1,a_2,a_3,\ldots,a_k,a_{k+1}\}  
+\]
+From the Induction Assumption we know that the elements $\{a_1,a_2,a_3,\ldots,a_k\}$ have a maximum $M_1$, and a minimum $m_1$.\\
+\[
+    max\{A_{k+1}\} = max\{M_1,a_{k+1}\},\qquad min\{A_{k+1}\} = min\{m_1,a_{k+1}\}
+\]
+With that we proved that a finite set of real numbers always has a minimum and a maximum.
+
+
+
+
+
+
+
+
+

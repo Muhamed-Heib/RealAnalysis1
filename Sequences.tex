@@ -224,7 +224,7 @@ Given that $L<K \Longrightarrow \frac{K+2L}{3}<\frac{2K+L}{3}\Longrightarrow$
     \frac{4L-K}{3}<a_n<\frac{K+2L}{3}<\frac{2K+L}{3}<a_n<\frac{4K-L}{3}
 \]
 Meaning for all the indexes bigger than $N$ the terms of the sequence are located in two different places, which is a contradiction.\\\\
-\textbf{Note:} This is not an easy proof to grasp and understand, if you did not understand it at first, give it some time, go over it a couple of time, maybe sleep on it, but rest assure when you're reviewing the material in a couple of weeks, this proof is gonna be as smooth as butter.\\
+\textbf{Note:} This is not an easy proof to grasp and understand, if you did not understand it at first, give it some time, go over it a couple of time, maybe sleep on it, but rest assured when you're reviewing the material in a couple of weeks, this proof is gonna be as smooth as butter.\\
 
 
 \newpage
@@ -281,11 +281,11 @@ $\forall\; n>\lceil N\rceil$, meaning we're looking at the indexes bigger than $
 \noindent\textbf{Theorem:}\\
 $a_n\rightarrow L \Longrightarrow a_n$ is bounded\\
 \begin{proof}
-    $a_n\rightarrow L \Longrightarrow \forall\;\text{for} \varepsilon=1,\; \exists\; N\in \N,$ such that $\forall n>N\Longrightarrow$
+    $a_n\rightarrow L \Longrightarrow \;\text{for } \varepsilon=1,\; \exists\; N\in \N,$ such that $\forall n>N\Longrightarrow$
     \[
         |a_n-L|<1 \iff L-1<a_n<L+1
     \]
-    Since the sequence approaches $L$ this means that for any positive number $\varepsilon\; \exists N\ldots$\\
+    Since the sequence approaches $L$ this means that for any positive number $\varepsilon,\; \exists N\ldots$\\
     Therefor i can pick any positive number i want, and it is still going to work, because it works with any positive number.\\
     \textbf{Note:} You can pick any positive number instead of $1$ and the proof still works the same.\\
     If we look at the terms of the sequence:
@@ -293,7 +293,7 @@ $a_n\rightarrow L \Longrightarrow a_n$ is bounded\\
         a_1,a_2,a_3,\ldots,a_N,a_{N+1},\ldots,a_n
     \]
     We know for a fact that forall indexes after $N$ the sequence is bounded because of the definition of the limit $\forall n>N\Longrightarrow L-1<a_n<L+1$\\
-    That leaves us with the first $N$ terms, if we look at the group $\{a_1,a_2,\ldots,a_N\}$, it is finite group, meaning it has a maximum and a minimum.\\
+    That leaves us with the first $N$ terms, if we look at the group $\{a_1,a_2,\ldots,a_N\}$, it is finite group of real numbers, meaning it has a maximum and a minimum.\\
     \[
         K=max\{a_1,a_2,\ldots,a_N\},\; k = min\{a_1,a_2,\ldots,a_N\}
     \]
@@ -495,7 +495,6 @@ $b_n\rightarrow L \iff \forall\; \varepsilon>0,\; \exists\; N\in \R,\;$ such tha
     |b_n-L|<\varepsilon
 \]
 This is what it means for a sequence to convergent to $L$, which is what we want to prove.\\
-\begin{proof}
     $a_n\rightarrow L \Longrightarrow$\\
     $\forall\; \varepsilon>0,\;\exists\; N_1\in \R,\;$ such that $\forall\; n>N\Longrightarrow$
     \[
@@ -521,4 +520,411 @@ This is what it means for a sequence to convergent to $L$, which is what we want
     \[
         \Longrightarrow L-\varepsilon<b_n<L+\varepsilon
     \]
-\end{proof}
+
+\newpage
+\subsection{More Limit Thoerems}
+\subsubsection{Theroem 1}
+$a_n \rightarrow L>0 \Longrightarrow \exists\; N$, such that $\forall n>N \Longrightarrow a_n>0$\\
+\[
+    a_n \rightarrow L \Longrightarrow \forall\; \varepsilon >0,\; \exists\; N_1 \text{, such that } \forall\; n>N \Longrightarrow
+    \]
+\[        
+    |a_n-L|<\varepsilon \iff L-\varepsilon<a_n<L+\varepsilon
+\]
+$L>0 \Longrightarrow \frac{L}{2}>0$, For $\varepsilon = \frac{L}{2},\; \exists\; N_1$, such that $\forall n>N_1 \Longrightarrow$
+\[
+    L-\frac{L}{2}<a_n<L+\frac{L}{2}
+\]
+\[
+    0<\frac{L}{2}<a_n<\frac{3L}{2} \Longrightarrow a_n>0
+\]
+\subsubsection{Theorem 2}
+$a_n\rightarrow L,\; b_n\rightarrow K ,\; \forall\; n\in \N\;\Longrightarrow a_n\geq b_n \Longrightarrow L\geq K$\\
+Given two real numbers $L,K$ that we know nothing about, we know that one of two things is true:\\
+\begin{enumerate}
+    \item $L\geq K$
+    \item $L<K$
+\end{enumerate}
+If we are able to prove that the statment $L<K$ is false, then we prove that $L\geq K$.\\
+We're going to do a prove by contradiction, by assuming that something is true, then coming to a contradiction about what we know for a fact is true.\\\\
+Let's assume that $L<K$\\
+$a_n\rightarrow L \Longrightarrow \forall\; \varepsilon >0, \exists\; N,$ such that $\forall\; n>N \Longrightarrow$\\
+\[
+    L-\varepsilon<a_n<L+\varepsilon
+\]
+$b_n\rightarrow L \Longrightarrow \forall\; \varepsilon >0, \exists\; N,$ such that $\forall\; n>N \Longrightarrow$\\
+\[
+    L-\varepsilon<b_n<L+\varepsilon
+\]
+Given: $K-L>0 \iff \frac{K-L}{3}>0 \Longrightarrow$ For $\varepsilon = \frac{K-L}{3}\; \exists\; N_1$ such that $\forall\; n>N_1\Longrightarrow$\\
+\[
+    L-\frac{K-L}{3}<a_n<\L+\frac{K-L}{3}
+\] 
+\[
+    a_n<\frac{K+2L}{3}
+\]
+$\exists\; N_2$ such that $\forall\; n>N_2 \Longrightarrow$\\
+\[
+    K-\frac{K-L}{3}<b_n<K+\frac{K-L}{3}
+\]
+\[
+    \frac{2K+L}{3}<b_n
+\]
+$K>L \Longrightarrow \frac{K+2L}{3}<\frac{2K+L}{3}\Longrightarrow$ For $N = max\{N_1,N_2\}$ and $\forall\; n>N\Longrightarrow$\\
+\[
+    a_n<\frac{K+2L}{3}<\frac{2K+L}{3}<b_n
+\]
+Which is a contradiction to the statment that $a_n\geq b_n \forall\; n\in \N$, meaning that the statment $L<K$ is not true. that means that the statment $L\geq K$ is true.\\
+\subsection{Harmonic, Geometric, Arithmetic Mean}
+\subsubsection{Definitions}
+\textbf{Arithmetic Mean}\\
+Given a set of real numbers $\{x_1,x_2,x_3,\ldots,x_n\}$, the arithmetic mean of this set is:\\
+\[
+    \frac{x_1+x_2+x_3+\ldots+x_n}{n}
+\]
+\textbf{Geometric Mean}\\
+Given a set of positive numbers $\{y_1,y_2,y_3,\ldots,y_n\}$, the geometric mean of this set is:\\
+\[
+    \sqrt[n]{y_1\cdot y_2\cdot y_3\cdot \;\ldots\; \cdot  y_n}
+\]
+\textbf{Harmonic Mean}\\
+Given a set of positive numbers $\{z_1,z_2,z_3,\ldots,z_n\}$, the harmonic mean of this set is:\\
+\[
+    \frac{n}{\frac{1}{z_1}+\frac{1}{z_2}+\frac{1}{z_3}+\ldots+\frac{1}{z_n}}
+\]
+\subsubsection{Inequalities}
+\[
+    \text{Harmonic Mean } \leq \text{Geometric Mean } \leq \text{Arithmetic Mean}
+\]
+In Short:\\
+\[
+    \text{HM GM AM Inequalities}
+\]
+Given a set of positive numbers $\{x_1,x_2,x_3,\ldots,x_n\}$\\
+\[
+    \frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+\frac{1}{x_3}+\ldots+\frac{1}{x_n}} \leq \sqrt[n]{x_1\cdot x_2\cdot x_3\cdot\; \ldots\; \cdot x_n} \leq \frac{x_1+x_2+x_3+\ldots+x_n}{n}
+\]
+\subsubsection{GM AM Inequality Proof}
+We will prove this inequality using induction.\\
+Base Case:\\
+For $n = 1\;$ $\frac{x_1}{1} = {x_1}^1$ we're more interested when $n = 2$\\
+For $n = 2\;$
+\[
+    \sqrt[2]{x_1\cdot x_2} \leq \frac{x_1+x_2}{2}
+\]
+\[
+    \Updownarrow 
+\]
+\[
+    x_1\cdot x_2 \leq \frac{(x_1+x_2)^2}{4} = \frac{{x_1}^2+2x_1x_2+{x_2}^2}{4}
+\]
+\[
+    \Updownarrow
+\]
+\[
+    4x_1x_2\leq {x_1}^2+2x_1x_2+{x_2}^2
+\]
+\[
+    \Updownarrow
+\]
+\[
+    0\leq {x_1}^2-2x_1x_2+{x_2}^2
+\]
+$(x_1-x_2)^2 = {x_1}^2-2x_1x_2+{x_2}^2$
+\[
+    \Updownarrow
+\]
+\[
+    0\leq (x_1-x_2)^2
+\]
+Which is always true.\\
+Let's assume that for any natural number $k\geq 2$ that the claim, we want to prove that the claim is also true for $2k$, Meaning:\\
+\[
+    \sqrt[2k]{x_1\cdot x_2\cdot x_3\cdot\; \ldots\; x_{2k}}\leq \frac{x_1+x_2+x_3+\ldots+x_{2k}}{2k}
+\]
+Using our induction assumption that:\\
+\[
+    \sqrt[k]{x_1\cdot x_2\cdot x_3\cdot\; \ldots\; x_{k}}\leq \frac{x_1+x_2+x_3+\ldots+x_{k}}{k}
+\]
+We can see that:\\
+\[
+    \frac{x_1+x_2+x_3+\ldots+x_{2k}}{2k} = \frac{\frac{x_1+x_2+x_3+\ldots+x_{k}}{k}+\frac{x_{k+1}+x_{k+2}+x_{k+3}+\ldots+x_{2k}}{k}}{2}
+\]
+\[
+    \frac{\frac{x_1+x_2+x_3+\ldots+x_{k}}{k}+\frac{x_{k+1}+x_{k+2}+x_{k+3}+\ldots+x_{2k}}{k}}{2}\geq \frac{\sqrt[k]{x_1\cdot x_2\cdot x_3\; \cdot\;x_k} + \sqrt[k]{x_{k+1}\cdot x_{k+2}\cdot x_{k+3}\cdot \ldots x_{2k}}}{2}
+\]
+\[
+    \frac{\sqrt[k]{x_1\cdot x_2\cdot x_3\; \cdot\;x_k} + \sqrt[k]{x_{k+1}\cdot x_{k+2}\cdot x_{k+3}\cdot \ldots x_{2k}}}{2} \geq \sqrt{\sqrt[k]{x_1\cdot x_2\cdot x_3\; \cdot\;x_k}\cdot \sqrt[k]{x_{k+1}\cdot x_{k+2}\cdot x_{k+3}\cdot \ldots x_{2k}}}
+\]
+\[
+    \sqrt{\sqrt[k]{x_1\cdot x_2\cdot x_3\; \cdot\;x_k}\cdot \sqrt[k]{x_{k+1}\cdot x_{k+2}\cdot x_{k+3}\cdot \ldots x_{2k}}} = \sqrt{\sqrt[k]{x_1\cdot x_2\cdot x_3\cdot \ldots\cdot x_k\cdot \ldots x_{2k}}}
+\]
+\[
+    \sqrt{\sqrt[k]{x_1\cdot x_2\cdot x_3\cdot \ldots\cdot x_k\cdot \ldots x_{2k}}} = \sqrt[2k]{x_1\cdot x_2\cdot x_3\cdot \ldots\cdot x_k\cdot \ldots x_{2k}}
+\]
+We proved that if we know that $P(k)$ is true, then $P(2k)$ is true.\\
+Meaning: $P(2)$ is true (We Proved It In Base Case), then $P(4)$ is also true, then $P(8)$ is true, then $P(16)$ is also true $\ldots$, it is not quite a full proof because what about $P(3)$ and $P(5),\;P(6) \ldots$ , our second step will fill in the gaps.\\
+We're still on our induction assumption that $P(k)$ is true.\\
+we want to prove that $P(k-1)$ is true.\\
+From our induction assumption we know that:
+\[
+    \frac{x_1+x_2+x_3+\ldots+x_k}{k}\geq \sqrt{x_1\cdot x_2\cdot x_3\cdot \; \ldots\; \cdot x_k}
+\]
+Note that this inequality is true when $x_n$ is any positive number, meaning i can pick any specified number instead of $x_n$, and this inequality will still be true.\\
+Let $x_k = \frac{x_1+x_2+x_3+\ldots x_{k-1}}{k-1}$
+\[
+    \frac{x_1+x_2+x_3+\ldots+x_k}{k} = \frac{x_1+x_2+x_3+\ldots+\frac{x_1+x_2+x_3+\ldots x_{k-1}}{k-1}}{k}
+\]
+\[
+    \frac{x_1+x_2+x_3+\ldots+x_{k-1}+\frac{x_1+x_2+x_3+\ldots x_{k-1}}{k-1}}{k} \geq \sqrt[k]{x_1\cdot x_2\cdot x_3\cdot \;\ldots\; \cdot \frac{x_1+x_2+x_3+\ldots x_{k-1}}{k-1}}
+\]
+\[
+    \frac{x_1+x_2+x_3+\ldots+x_{k-1}}{k-1} \leq x_1+x_2+x_3+\ldots+x_{k-1} 
+\]
+\[
+    \Longrightarrow \frac{x_1+x_2+x_3+\ldots+x_{k-1}+\frac{x_1+x_2+x_3+\ldots x_{k-1}}{k-1}}{k} \leq \frac{x_1+x_2+x_3+\ldots+x_{k-1}}{k-1}
+\]
+\[
+    \frac{x_1+x_2+x_3+\ldots+x_{k-1}}{k-1} \geq \sqrt[k]{x_1\cdot x_2\cdot x_3\cdot \;\ldots\; \cdot \frac{x_1+x_2+x_3+\ldots x_{k-1}}{k-1}}
+\]
+Power both sides by k
+\[
+    {(\frac{x_1+x_2+x_3+\ldots+x_{k-1}}{k-1})}^k \geq x_1\cdot x_2\cdot x_3\cdot \;\ldots\; \cdot \frac{x_1+x_2+x_3+\ldots x_{k-1}}{k-1}
+\]
+Dividing both sides by $\frac{x_1+x_2+x_3+\ldots+x_{k-1}}{k-1}$
+\[
+    \frac{{(\frac{x_1+x_2+x_3+\ldots+x_{k-1}}{k-1})}^k}{\frac{x_1+x_2+x_3+\ldots+x_{k-1}}{k-1}} \geq \frac{x_1\cdot x_2\cdot x_3\cdot \;\ldots\; \cdot \frac{x_1+x_2+x_3+\ldots x_{k-1}}{k-1}}{\frac{x_1+x_2+x_3+\ldots x_{k-1}}{k-1}}
+\]
+\[
+    {(\frac{x_1+x_2+x_3+\ldots+x_{k-1}}{k-1})}^{k-1} \geq x_1\cdot x_2\cdot x_3\cdot \;\ldots\; \cdot x_{k-1}
+\]
+k'th root both sides
+\[
+    \frac{x_1+x_2+x_3+\ldots+x_{k-1}}{k-1} \geq \sqrt[k-1]{x_1\cdot x_2\cdot x_3\cdot \;\ldots\; \cdot x_{k-1}}
+\]
+Which is what we wanted to prove.\\
+If we know that $P(k)$ is true, then $P(k-1)$ is true.\\
+Meaning that $P(2)$ is true, then $P(4)$ is true based on our previous proof,$P(4)$ is true, then $P(3)$ is true, then $P(6)$ is true, then $P(5)$ is true, then $P(10)$ is true, then $P(9)$ is true, and if $P(4)$ is true, then $P(8)$ is true and $P(7)$ is true.\\
+Meaning for all natural numbers the inequality above is true.\\
+\subsubsection{HM GM Inequality Proof}
+Just to remember that the Harmonic Mean is:
+\[
+    \frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+\frac{1}{x_3}+\ldots+\frac{1}{x_n}}
+\]
+We want to prove that:
+\[
+    \frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+\frac{1}{x_3}+\ldots+\frac{1}{x_n}}\leq \sqrt[n]{x_1\cdot x_2\cdot x_3\cdot\;\ldots\; \cdot x_n}
+\]
+For any positive number $x_n, \frac{1}{x_n},\; \forall\; n\in \N$ is also positive, let's define $a_n$ to be the fraction $\frac{1}{x_n}$.\\
+We know:
+\[
+    \sqrt[n]{a_1\cdot a_2\cdot a_3\cdot\;\ldots\;\cdot a_n}\leq \frac{a_1+a_2+a_3+\ldots+a_n}{n}
+\]
+Let's take the inverse of both sides
+\[
+    \frac{1}{\sqrt[n]{a_1\cdot a_2\cdot a_3\cdot\;\ldots\;\cdot a_n}} \geq \frac{n}{a_1+a_2+a_3+\ldots+a_n}
+\]
+Substitute $\frac{1}{x_n}$ for $a_n$
+\[
+    \frac{1}{\sqrt[n]{\frac{1}{x_1}\cdot \frac{1}{x_2}\cdot \frac{1}{x_3}\cdot\;\ldots\;\cdot \frac{1}{x_n}}} \geq \frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+\frac{1}{x_3}+\ldots+\frac{1}{x_n}}
+\]
+\[
+    \frac{1}{\sqrt[n]{\frac{1}{x_1}\cdot \frac{1}{x_2}\cdot \frac{1}{x_3}\cdot\;\ldots\;\cdot \frac{1}{x_n}}} = \frac{1}{\sqrt[-n]{x_1\cdot x_2\cdot x_3\cdot\; \ldots\; \cdot x_n}} = \sqrt[n]{x_1\cdot x_2\cdot x_3\cdot\; \ldots\; \cdot x_n}
+\]
+\[
+    \sqrt[n]{x_1\cdot x_2\cdot x_3\cdot\; \ldots\; \cdot x_n} \geq   \frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+\frac{1}{x_3}+\ldots+\frac{1}{x_n}}
+\]
+With that we proved that the Harmonic Mean $\leq$ the Geometric Mean.\\
+Meaning:
+\[
+    \frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+\frac{1}{x_3}+\ldots+\frac{1}{x_n}}\leq \sqrt[n]{x_1\cdot x_2\cdot x_3\cdot\; \ldots\; \cdot x_n}\leq \frac{x_1+x_2+x_3+\ldots x_n}{n}
+\]
+\subsection{Even More Limit Theorems}
+Given $a_n \rightarrow L,\; a_n>0 \;\forall\; n\in \N \;$ We want to prove the following statments:\\
+\begin{enumerate}
+    \item The sequence of Arithmetic Mean $x_n = \frac{a_1+a_2+a_3+\ldots+a_n}{n} \rightarrow L$
+    \item The sequence of Geometric Mean $y_n = \sqrt[n]{a_1\cdot a_2\cdot a_3\cdot\; \ldots\;\cdot a_n} \rightarrow L$
+    \item The sequence of Harmonic Mean $z_n = \frac{n}{\frac{1}{a_1}+\frac{1}{a_2}+\frac{1}{a_3}+\ldots+\frac{1}{a_n}}\rightarrow L$
+\end{enumerate}
+\subsubsection{Proof 1}
+$a_n\rightarrow L \iff \forall\; \varepsilon>0,\; \exists N_1\in \N$ such that $\forall\; n>N\Longrightarrow$
+\[
+    |a_n-L|<\frac{\varepsilon}{2}
+\]
+\[
+    \big|\frac{a_1+a_2+a_3+\ldots+a_n}{n}-L \big| = \big|\frac{a_1+a_2+a_3+\ldots+a_n -nL}{n} \big| 
+\]
+\[
+    \big|\frac{a_1+a_2+a_3+\ldots+a_n -nL}{n} \big| = \big|\frac{(a_1-L)+(a_2-L)+(a_3-L)+\ldots+(a_{N_1}-L)+\ldots+(a_n-L)}{n} \big|
+\]
+\[
+    =
+\]
+\[
+ \big|\frac{(a_1-L)+(a_2-L)+(a_3-L)+\ldots+(a_{N_1}-L)}{n}+\frac{(a_{N_1+1}-L)+(a_{N_1+2}-L)+(a_{N_1+3}-L)+\ldots+(a_n-L)}{n} \big|
+\]
+\[
+    \leq
+\]
+\[
+    \big|\frac{(a_1-L)+(a_2-L)+(a_3-L)+\ldots+(a_{N_1}-L)}{n}\big| + \big| \frac{(a_{N_1+1}-L)+(a_{N_1+2}-L)+(a_{N_1+3}-L)+\ldots+(a_n-L)}{n} \big|
+\]
+Let $a_1+a_2+a_3+\ldots+a_{N_1} - N_1\cdot L = t\;$ which is a constant, because we know what the values of $a_1,\ldots a_{N_1}$ are, and $N_1$ and $L$\\
+
+If we look at the sequence $\frac{t}{n}$ we can see that it approaches $0$, therefor\\
+$\forall\; \varepsilon>0,\; \exists N_2$ such that $\forall\; n>N_2 \Longrightarrow$
+\[
+    \big|\frac{(a_1-L)+(a_2-L)+(a_3-L)+(a_{N_1}-L)}{n}\big| = \big|\frac{t}{n} \big| <\frac{\varepsilon}{2} 
+\]
+We know that $\forall\; n>N_1 \Longrightarrow |a_n-L|<\varepsilon$ 
+\[
+    \big|\frac{(a_{N_1+1}-L)+(a_{N_1+2}-L)+(a_{N_1+3}-L)+\ldots+(a_n-L)}{n} \big|\leq \big|a_{N_1+1}-L\big| + \big|a_{N_1+2}-L\big| + \ldots + \big|a_n-L\big| \cdot \frac{n-N_1}{n}
+\]
+\[
+    \frac{n-N_1}{n}<\frac{n}{n} = 1
+\]
+\[
+    \big|a_{N_1+1}-L\big| + \big|a_{N_1+2}-L\big| + \ldots + \big|a_n-L\big| \cdot \frac{n-N_1}{n} < \frac{\varepsilon}{2}\cdot \frac{n-N_1}{n} <\frac{\varepsilon}{2}
+\]
+For $N = max\{N_1,N_2\}$
+\[
+    |x_n-L|<\varepsilon
+\]
+\subsubsection{Proof 3}
+Let $c_n = \frac{1}{a_n} \Longrightarrow c_n\rightarrow L$
+\[
+    \text{Let } t_n = \frac{c_1+c_2+c_3+\ldots+c_n}{n} \rightarrow \frac{1}{L}
+\]
+Let $z_n = \frac{1}{t_n}\Longrightarrow z_n\rightarrow L$
+\[
+    z_n = \frac{n}{c_1+c_2+c_3+\ldots+c_n} = \frac{n}{\frac{1}{a_1}+\frac{1}{a_2}+\frac{1}{a_3}+\ldots+\frac{1}{a_n}}\rightarrow L
+\]
+\subsubsection{Proof 2}
+We know about the HM GM AM Inequalities
+\[
+    \frac{n}{\frac{1}{a_1}+\frac{1}{a_2}+\frac{1}{a_3}+\ldots+\frac{1}{a_n}}\leq \sqrt[n]{a_1\cdot a_2\cdot a_3\cdot\; \ldots \; a_n} \leq \frac{a_1+a_2+a_3+\ldots+a_n}{n}
+\]
+We just proved these two limits
+\[
+    \frac{n}{\frac{1}{a_1}+\frac{1}{a_2}+\frac{1}{a_3}+\ldots+\frac{1}{a_n}} \rightarrow L
+\]
+\[
+    \frac{a_1+a_2+a_3+\ldots+a_n}{n}\rightarrow L
+\]
+Using Sandwich Theorem
+\[
+    L\leq\sqrt[n]{a_1\cdot a_2\cdot a_3\cdot\; \ldots \; a_n}\leq L
+\]
+$\Longrightarrow \sqrt[n]{a_1\cdot a_2\cdot a_3\cdot\; \ldots \; a_n}\rightarrow L$
+\subsubsection{Ratio Test Theorem}
+If $a_n>0\; \forall\; n\in \N,\; \lim_{n\to\infty} \frac{a_{n}}{a_{n-1}} = L \Longrightarrow \sqrt[n]{a_n} = L$\\
+Important to note that we don't know that $a_n\rightarrow L$\\
+Let's define $a_0$ to be $1$\
+\[
+    a_n = \frac{a_1}{a_0}\cdot \frac{a_2}{a_1}\cdot\frac{a_3}{a_2}\cdot\frac{a_4}{a_3}\cdot\;\ldots\;\cdot \frac{a_n}{a_{n-1}}
+\]
+\[
+    \sqrt[n]{a_n} = \sqrt[n]{\frac{a_1}{a_0}\cdot \frac{a_2}{a_1}\cdot\frac{a_3}{a_2}\cdot\frac{a_4}{a_3}\cdot\;\ldots\;\cdot \frac{a_n}{a_{n-1}}}
+\]
+Let $b_n = \frac{a_n}{a_{n-1}}$, we know that $b_n\rightarrow L$\\
+\[
+    \sqrt[n]{a_n} = \sqrt[n]{\frac{a_1}{a_0}\cdot \frac{a_2}{a_1}\cdot\frac{a_3}{a_2}\cdot\frac{a_4}{a_3}\cdot\;\ldots\;\cdot \frac{a_n}{a_{n-1}}} = \sqrt[n]{b_1\cdot b_2\cdot b_3\cdot \; \ldots \;b_n}
+\]
+We just proved that if $b_n>0\; \forall\; n\in N$ and $b_n\rightarrow L \Longrightarrow \sqrt[n]{b_1\cdot b_2\cdot b_3\cdot \; \ldots \;b_n}\rightarrow L$
+\[
+    \sqrt[n]{a_n} = \sqrt[n]{b_1\cdot b_2\cdot b_3\cdot \; \ldots \;b_n}\rightarrow L
+\]
+\subsubsection{Theorem Applications}
+We want to prove that given $c>0$ $\sqrt[n]{c} \rightarrow 1$\\
+$a_n = c \Longrightarrow \lim_{n\to\infty} \frac{a_n}{a_{n-1}} = \frac{c}{c} = 1 \Longrightarrow \sqrt[n]{a_n} = 1 = \sqrt[n]{c}$\\
+With the same concept we find the limit for the sequence $\sqrt[n]{n},\;$ let $a_n = n$\\
+$\lim_{n\to\infty} \frac{a_n}{a_{n-1}} = \frac{n}{n-1}\rightarrow 1 \Longrightarrow \sqrt[n]{n} = 1$
+
+
+\newpage
+\section{Approaching $\infty$ and $-\infty$}
+\subsection{Understanding The Definition}
+We say that a sequence approaches $\infty$ if and only if we pick any real number, there exists a point  such that for all the indexes bigger than that point all the terms of the sequence are bigger than that number.\\
+\subsection{The Definition}
+$a_n\rightarrow \infty \iff \forall\; M\in \R,\; \exists\;N\in \R$, such that $\forall n>N \Longrightarrow$\\
+\[
+    a_n>M
+\]
+Proving that the sequence $a_n=n \rightarrow \infty$\\
+$\forall\; M\in \R,\; \exists\; N=\square$, such that $\forall n>N\Longrightarrow$
+\[
+    n>N=M
+\]
+\subsection{Equivalent Definition}
+$a_n\rightarrow \infty \iff \forall\;M>0,\;\exists\; N\in \R$, such that $\forall\; n>N\Longrightarrow$
+\[
+    a_n>M
+\]
+We can't just say that this is an equivalent definition for a sequence approaching infinity, we have to prove it.\\
+Meaning we have to prove:\\
+$\forall\; M\in \R,\; \exists\;N\in \R$, such that $\forall n>N \Longrightarrow a_n>M \iff a_n\rightarrow \infty \iff \forall\;M>0,\;\exists\; N\in \R$, such that $\forall\; n>N\Longrightarrow a_n>M$\\
+$\Longrightarrow$\\
+If we know that the definition works $\forall\; M\in \R$, then it works $\forall\;M>0$\\
+$\Longleftarrow$\\
+If we know that $\forall\; M>0,\;\exists\; \N\in\R$, such that $\forall\; n>N \Longrightarrow$
+\[
+    a_n>M>0
+\]
+then it works $\forall\; M\leq 0$\\
+You'll see why this is important.\\
+\subsection{Definitions For Approaching $-\infty$}
+Similarly $a_n\rightarrow -\infty \iff \forall\; M\in \R,\;$ or $\forall\; M>0,\; \exists\; N\in \R$, such that $\forall\; n>N\Longrightarrow$
+\[
+    a_n<M
+\] 
+\subsection{Proving $2^n\rightarrow \infty$}
+$\forall\; M\in \R,\; \exists\; N=\square$, such that $\forall\; n>N\Longrightarrow$
+\[
+    2^n>2^N = M
+\]
+meaning that $N = \log_2 {M}$, the problem with this statment is that $M$ could be any number including negative numbers, which is a problem because $\log_2{x}$ is defined when $x>0$, this is we another definition for approaching infinity,  $\forall\;M>0.$\\
+This is also true $\forall\; a>1$ meaning $a^n \rightarrow \infty$ \textbf{Prove As Practice}
+\subsection{Infinity Limit Theorems}
+$a_n\rightarrow \infty, a_n\neq 0 \;\forall\; n \Longrightarrow \frac{1}{a_n}\rightarrow 0$
+We want to prove that $\forall\; \varepsilon>0\; \exists\; N$, such that $\forall\; n>N\Longrightarrow$
+\[
+    |\frac{1}{a_n} - 0| = |\frac{1}{a_n}|<\varepsilon
+\]
+\[
+    \Updownarrow
+\]
+\[
+    |a_n|>\frac{1}{\varepsilon}
+\]
+$a_n\rightarrow \infty \Longrightarrow$ For $M=\frac{1}{\varepsilon},\; \exists\;N_1$, such that $\forall\; n>N_1$
+\[
+    a_n>\frac{1}{\varepsilon}
+\]
+For $N=N_1$, such that $\forall\; n>N_1\Longrightarrow$
+\[
+    a_n>\frac{1}{\varepsilon} \Longrightarrow |a_n|>\frac{1}{\varepsilon}
+\]
+Given: $a_n\rightarrow 0, a_n>0\; \forall\; n\Longrightarrow \frac{1}{a_n}\rightarrow \infty$\\
+We want to prove that $\forall\; M>0,\; \exists\;N$, such that $\forall\; n>N\Longrightarrow$
+\[
+    \frac{1}{a_n}>M \iff a_n<\frac{1}{M}
+\]
+$a_n\rightarrow 0 \Longrightarrow$ For $\varepsilon = \frac{1}{M}\Longrightarrow \exists\; N_1$, such that $\forall\; n>N_1\Longrightarrow$
+\[
+    |a_n-0| = |a_n| = a_n<\frac{1}{M}
+\]
+Given $|q|<1 \Longrightarrow |q|^n\rightarrow 0$\\
+If $q = 0$, then $0^n \rightarrow 0$\\
+Otherwise, for $q\neq 0 \Longrightarrow$ if $|q|<1 \Longrightarrow \frac{1}{|q|}>1$.\\
+Let's define $a = \frac{1}{|q|}\Longrightarrow a>1 \Longrightarrow a^n \rightarrow \infty \Longrightarrow \frac{1}{a_n} = |q|^n \rightarrow 0$\\
+\subsubsection{The Pizza Theroem}
+Given: $a_n\leq b_n\; \forall\;n,\; a_n\rightarrow\infty\Longrightarrow b_n\rightarrow \infty$
+$a_n\rightarrow \infty \Longrightarrow \forall\; M\in \R,\; \exists\; N_1$, such that $\forall\; n>N_1 \Longrightarrow$
+\[
+    a_n>M
+\]
+Given: $a_n\leq b_n \rightarrow$
+\[
+    M<a_n\leq b_n \Longrightarrow M<b_n
+\]
+Meaning that $b_n\rightarrow\infty$
